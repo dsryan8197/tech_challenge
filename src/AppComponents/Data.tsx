@@ -1,12 +1,13 @@
+//imports
 import React, {useState, useEffect} from 'react';
 const axios = require('axios')
-// import { Link } from 'react-router-dom'
-// import { SideNavTabs } from '../components/SideNavTabs'
   
+
 const Data: React.FC = () => {
   const [songInfo, setSongInfo] = useState([])
 
-  useEffect(() => {
+  //our "componentDidMount" hook -> stores API response in state
+useEffect(() => {
     axios('https://iheartradiotechchallenge.s3.us-east-2.amazonaws.com/songData.json')
     .then((res:any)=> {
       setSongInfo(res.data)
@@ -15,61 +16,83 @@ const Data: React.FC = () => {
     .catch((err:any)=> {
       console.log(err)
     })
-  }, [])
+}, [])
 
-  const createTable = (songInfo:any) => {
+  //loop to populate Rows with song data (refactor to be more dry-> implement loop)
+const createTable = (songInfo:any) => {
     let arr = []
     for (let i = 0; i < songInfo.length; i++) {
       arr.push(
           <tr key={i}>
-            <td>{songInfo[i].song}</td>
-            <td>{songInfo[i].artist}</td>
-            <td>{songInfo[i].songReleaseDate}</td>
-            <td>{songInfo[i].playCount}</td>
+            <td><span>{songInfo[i].song}</span></td>
+            <td><span>{songInfo[i].artist}</span></td>
+            <td><span>{songInfo[i].songReleaseDate}</span></td>
+            <td><span>{songInfo[i].playCount}</span></td>
+            <td><span>{songInfo[i].metricA}</span></td>
+            <td><span>{songInfo[i].metricB}</span></td>
+            <td><span>{songInfo[i].metricC}</span></td>
+            <td><span>{songInfo[i].metricD}</span></td>
+            <td><span>{songInfo[i].metricE}</span></td>
+            <td><span>{songInfo[i].metricF}</span></td>
+            <td><span>{songInfo[i].metricG}</span></td>
+            <td><span>{songInfo[i].metricH}</span></td>
+            <td><span>{songInfo[i].metricI}</span></td>
+            <td><span>{songInfo[i].metricJ}</span></td>
+            <td><span>{songInfo[i].metricK}</span></td>
+            <td><span>{songInfo[i].metricL}</span></td>
+            <td><span>{songInfo[i].metricM}</span></td>
+            <td><span>{songInfo[i].metricN}</span></td>
+            <td><span>{songInfo[i].metricO}</span></td>
+            <td><span>{songInfo[i].metricP}</span></td>
           </tr>
       )
     }
-    console.log(arr)
     return arr
+}
+  //functions that take state and sort based on date/letter/number return updated state -> re-render DOM(incomplete)
+const sortByDate = (songInfo:any) => {
+} 
+
+const sortAlphabetically = (songInfo:any) => {
+}
+
+ const sortNumerically = (sortInfo:any) => {
+
+}
+  // function to iterate over key/value pairs creating <btn> aka column headers 
+const createHeader = (songInfo:any) => {
+  let arr=[]
+  for (let key in songInfo[0])
+  if (key.includes("metric")) {
+    arr.push(
+      <button className="tableButton" onClick={(songInfo) => sortNumerically(songInfo)}>
+        <th className="populatedDatath"><span className="populatedDataspan">{key}</span></th>
+      </button>
+    )
   }
-
-  const sortByDate = (songInfo:any) => {
-   
-  } 
-
-  const sortAlphabetically = (songInfo:any) => {
-  
-  }
-
-// const createHeader = (songInfo:any) => {
-//   let arr=[]
-//   alert(Object.keys(songInfo[0]))
-//   for (let i = 0; i < Object.keys(songInfo[0]).length; i++)
-//   arr.push(
-//     <button onClick={(songInfo) => sortAlphabetically(songInfo)}><th>{Object.keys(songInfo[0])[i]}</th></button>
-//   )
-//   console.log(arr)
-// return arr
-// }
-
-
+  console.log(arr)
+  return arr
+}
+  //renders the entire data table
   return (
     <div className='dataDiv'>
-      <h1>Data here</h1>
-      <table>
+      <h1 className="popSongs">Popular songs!</h1>
+    <div className="table">
+    <table>
         <thead>
           <tr>
-            {/* <button onClick={(songInfo) => sortAlphabetically(songInfo)}><th>Song</th></button>
-            <button onClick={(songInfo) => sortAlphabetically(songInfo)}><th>Artist</th></button>
-            <button onClick={(songInfo) => sortByDate(songInfo)}><th>Date</th></button>
-            <button onClick={(songInfo) => sortAlphabetically(songInfo)}><th>Play Count</th></button> */}
-            {/* {createHeader(songInfo)} */}
+            <button className="tableButton" onClick={(songInfo) => sortAlphabetically(songInfo)}><th><span>Song</span></th></button>
+            <button className="tableButton" onClick={(songInfo) => sortAlphabetically(songInfo)}><th><span>Artist</span></th></button>
+            <button className="tableButton" onClick={(songInfo) => sortByDate(songInfo)}><th><span>Date</span></th></button>
+            <button className="tableButton" onClick={(songInfo) => sortAlphabetically(songInfo)}><th><span>Count</span></th></button>
+            {createHeader(songInfo)}
           </tr>
         </thead>
         <tbody>
            {createTable(songInfo)}
         </tbody>
       </table>
+    </div>
     </div>
   );
 }

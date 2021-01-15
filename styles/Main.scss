@@ -1,6 +1,13 @@
-@import "./SideBar.scss";
 
+//fonts
+@import 'https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap';
 
+//Brand Colors (on other file
+
+//entire page
+html {
+  background-color: #939697;
+}
 .root {
   background-color: #FFFFFF;
   display: grid;
@@ -10,13 +17,20 @@
   ". . . . . . . ."
   ". . . header . . ."
   ". . . buttons . . ."
-  ". . . body . . . "
-  ". . . body . . ."
-  ". . . body . . ."
+  ". . . body body . . . "
+  ". . . body body . . . "
+  ". . . body body . . . "
   ". . . . . . . .";
 }
 
+.appDiv{
+  font-family: 'Didact Gothic', sans-serif;
+  display: grid;
+  justify-content: center;
+}
+
 .top-nav-container {
+  // font-family: 'Didact Gothic', sans-serif;
   display: grid;
   justify-self: center;
   grid-area: "header";
@@ -30,18 +44,82 @@
   align-items: center;
   justify-content: center;
 }
+.nav-bar{
+  display: flex;
+  padding-right: 60px;
+  align-content: center;
+}
 .homeDiv {
   display: grid;
   grid-area: "body";
-  align-items: center;
+  // width: 200px;
+  // align-items: center;
   justify-content: center;
-
+  // width: 180px;
+  text-align: center;
 }
+
+.homePtag {
+  display: flex;
+  justify-content: center;
+  grid-area: "body";
+   width: 250px;
+  // align-items: center;
+}
+
 .dataDiv {
   display: grid;
   grid-area: "body";
   justify-content: center;
   padding-bottom: 50px;
+}
+
+.table {
+  width: 800px;
+  border-collapse: collapse; 
+  // width:auto;
+  flex-wrap: nowrap;
+  overflow: auto;
+  white-space: nowrap;
+  overflow-x: auto;
+  border: 2px solid #C6002B;
+  height: 500px;
+}
+
+//header
+th {
+  // background-color:$PrimaryBrand;
+  // min-width: 150px;
+  height: 2.5rem;
+  text-align: center; 
+  filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.25));
+}
+tbody {
+  max-width: 100px;
+}
+
+td {
+  background-color: white;
+  color: black;
+  table-layout: fixed; 
+  width: 100px;
+  // min-width: 30px;
+  // max-width: 100px;
+  // text-align: center;
+  // font-family: $Content;
+  filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.25));
+}
+span {
+max-width: 100px;
+text-align: center;
+}
+
+tr {
+  max-width: 100px;
+}
+
+.tableButton {
+ min-width: 200px;
 }
 
 .seamusDiv {
@@ -50,9 +128,29 @@ justify-content: center;
 display: grid;
 }
 
-// "1A 2A 3A 4A 5A 6A 7A"
-// "1B 2B 3B 4B 5B 6B 7B"
-// "1C 2C 3C 4C 5C 6C 7C"
-// "1D 2D 3D 4D 5D 6D 7D"
-// "1E 2E 3E 4E 5E 6E 7E"
-// "1F 2F 3F 4F 5F 6F 7F";
+.mainButton {
+  background-color: #C6002B;
+  color: white;
+  border-radius: 20px;
+  font-family: 'Didact Gothic', sans-serif;
+  // border: none;
+}
+
+.btnLink {
+  padding-left: 20px;
+  // padding-right: 20px;
+}
+.welcome {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.popSongs {
+  text-align: center;
+  justify-content: center;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+}

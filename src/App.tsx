@@ -1,22 +1,22 @@
 //imports
 import React, { Component, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-// import axios from 'axios'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
-//file imports
+//file modularity
 import SideNav from './AppComponents/SideNav';
 import TopNav from './AppComponents/TopNav';
 import Seamus from './AppComponents/Seamus'
 import Home from './AppComponents/Home'
 import Data from './AppComponents/Data'
+
 //styles
 import '../styles/Main.scss'
 
-
+//parent React Component + manages React Router
 const App: React.FC = () => {
     return (
-    <div>
+    <div className="appDiv">
         <Router>
             <TopNav />
             <SideNav />
@@ -30,4 +30,5 @@ const App: React.FC = () => {
  )
 }
 
+//renders App and its children at the root id on index.html
 ReactDOM.render(<App />, document.querySelector('#root'));
