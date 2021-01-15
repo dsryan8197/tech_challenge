@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 
 const Home: React.FC = () => {
   return (
-    <div className='side-nav-container'>
-      <h1>Select from one of our paths above</h1>
+    <div className='homeDiv'>
+      <h1>Welcome IHeartMedia, please click "Data" to see your API</h1>
+      <h1>Afterwards, check out my about me page</h1>
     </div>
   );
 }

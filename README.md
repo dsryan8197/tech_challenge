@@ -1,3 +1,24 @@
+# Seamus Ryan IHeartMedia React Challenge
+
+### Get my take-home running!
+Clone my repo to your desktop
+Install the dependencies
+```js
+npm install
+```
+### Get The Project Running
+```js
+npm run dev
+```
+### Run my tests
+```js
+npm run test
+```
+
+## Contributors
+<p>Seamus Ryan <a href='https://github.com/dsryan8197' target="_blank">  @github </a><a  href='https://www.linkedin.com/in/dseamusryan/' target="_blank">  @linkedin</a></p>
+
+ 
  # iHeartMedia - Music Lab - Code Challenge
 
 Create a React application that shows a list of songs with their information and metrics displayed. The app should have at least **2 pages (views)**:

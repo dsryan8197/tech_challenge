@@ -33,16 +33,37 @@ const Data: React.FC = () => {
     return arr
   }
 
+  const sortByDate = (songInfo:any) => {
+   
+  } 
+
+  const sortAlphabetically = (songInfo:any) => {
+  
+  }
+
+// const createHeader = (songInfo:any) => {
+//   let arr=[]
+//   alert(Object.keys(songInfo[0]))
+//   for (let i = 0; i < Object.keys(songInfo[0]).length; i++)
+//   arr.push(
+//     <button onClick={(songInfo) => sortAlphabetically(songInfo)}><th>{Object.keys(songInfo[0])[i]}</th></button>
+//   )
+//   console.log(arr)
+// return arr
+// }
+
+
   return (
     <div className='dataDiv'>
       <h1>Data here</h1>
       <table>
         <thead>
           <tr>
-            <th>Song</th>
-            <th>Artist</th>
-            <th>Date</th>
-            <th>Play setCount</th>
+            {/* <button onClick={(songInfo) => sortAlphabetically(songInfo)}><th>Song</th></button>
+            <button onClick={(songInfo) => sortAlphabetically(songInfo)}><th>Artist</th></button>
+            <button onClick={(songInfo) => sortByDate(songInfo)}><th>Date</th></button>
+            <button onClick={(songInfo) => sortAlphabetically(songInfo)}><th>Play Count</th></button> */}
+            {/* {createHeader(songInfo)} */}
           </tr>
         </thead>
         <tbody>
