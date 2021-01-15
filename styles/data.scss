@@ -13,10 +13,8 @@
 .table {
   width: 800px;
   border-collapse: collapse; 
-  // width:auto;
   flex-wrap: nowrap;
   overflow: auto;
-  // white-space: nowrap;
   overflow-x: auto;
   border: 2px solid #C6002B;
   height: 500px;
@@ -34,7 +32,6 @@
   text-align: center;
   justify-content: center;
   width: 100%;
-  // padding-left: 70px;
 }
 
 //columns

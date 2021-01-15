@@ -37,16 +37,6 @@ html {
   justify-content: center;
 }
 
-// //header
-// .top-nav-container {
-//   // font-family: 'Didact Gothic', sans-serif;
-//   display: grid;
-//   justify-self: center;
-//   grid-area: "header";
-//   align-items: center;
-//   justify-content: center;
-//   padding-top: 50px;
-// }
 
 //title
 .welcome {
@@ -54,106 +44,11 @@ html {
   font-size: 50px;
   justify-content: center;
   text-align: center;
-  // padding-left: 40px;
 }
 
-
-//the header text
-// .nav-bar{
-//   display: flex;
-//   padding-right: 60px;
-//   align-content: center;
-// }
-
-// //div that wraps home component
-// .homeDiv {
-//   display: grid;
-//   grid-area: "body";
-//   justify-content: center;
-//   text-align: center;
-// }
-
-// //p tag within home componennt 
-// .homePtag {
-//   display: flex;
-//   justify-content: center;
-//   grid-area: "body";
-//    width: 250px;
-// }
-
-//div wrapping data component
 .dataDiv {
   display: grid;
   grid-area: "body";
   justify-content: center;
   padding-bottom: 50px;
 }
-
-// //entire table 
-// .table {
-//   width: 800px;
-//   border-collapse: collapse; 
-//   // width:auto;
-//   flex-wrap: nowrap;
-//   overflow: auto;
-//   white-space: nowrap;
-//   overflow-x: auto;
-//   border: 2px solid #C6002B;
-//   height: 500px;
-// }
-
-// //table header
-// .popSongs {
-//   text-align: center;
-//   justify-content: center;
-// }
-
-// //columns
-// th {
-//   height: 2.5rem;
-//   text-align: center; 
-//   filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.25));
-// }
-
-// //buttons wrapping columns
-// .tableButton {
-//   min-width: 200px;
-//  }
-
-//  //extra button info
-// button {
-//   height: 50px;
-//   width: 100px;
-// }
-
-// //inner columns
-// tr {
-//   max-width: 100px;
-// }
-
-// //body around the rows
-// tbody {
-//   max-width: 100px;
-// }
-
-// //rows
-// td {
-//   background-color: white;
-//   color: black;
-//   table-layout: fixed; 
-//   width: 100px;
-//   filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.25));
-// }
-
-// //span tags for table text
-// span {
-// max-width: 100px;
-// text-align: center;
-// }
-
-// //div wrapping seamus
-// .seamusDiv {
-// grid-area: "body";
-// justify-content: center;
-// display: grid;
-// }

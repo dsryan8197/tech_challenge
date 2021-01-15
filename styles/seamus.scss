@@ -1,8 +1,12 @@
 //div wrapping seamus
 .seamusDiv {
   grid-area: "body";
+  display: flex;
   justify-content: center;
+  align-content: center;
+  width: 400px;
   text-align: center;
   display: grid;
+  padding-left: 70px;
   }
   

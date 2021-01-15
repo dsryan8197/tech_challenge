@@ -1,20 +1,19 @@
 //imports
 import React, {useState, useEffect} from 'react';
 const axios = require('axios')
-  
+
 
 const Data: React.FC = () => {
   const [songInfo, setSongInfo] = useState([])
 
-  //our "componentDidMount" hook -> stores API response in state
+  //our "componentDidMount" hook -> stores API response in state // might be able to imrprove loading performance
+  //by prefetching or an onclick with react router before redirecting to this page
 useEffect(() => {
     axios('https://iheartradiotechchallenge.s3.us-east-2.amazonaws.com/songData.json')
     .then((res:any)=> {
       setSongInfo(res.data)
-      console.log(songInfo)
     })
     .catch((err:any)=> {
-      console.log(err)
     })
 }, [])
 
@@ -52,12 +51,9 @@ const createTable = (songInfo:any) => {
   //functions that take state and sort based on date/letter/number return updated state -> re-render DOM(incomplete)
 const sortByDate = (songInfo:any) => {
 } 
-
 const sortAlphabetically = (songInfo:any) => {
 }
-
  const sortNumerically = (sortInfo:any) => {
-
 }
   // function to iterate over key/value pairs creating <btn> aka column headers 
 const createHeader = (songInfo:any) => {
@@ -82,10 +78,10 @@ const createHeader = (songInfo:any) => {
         <thead>
           <tr>
             <div className="divdiv">
-            <button className="tableButton" onClick={(songInfo) => sortAlphabetically(songInfo)}><th><span>Song</span></th></button>
-            <button className="tableButton" onClick={(songInfo) => sortAlphabetically(songInfo)}><th><span>Artist</span></th></button>
-            <button className="tableButton" onClick={(songInfo) => sortByDate(songInfo)}><th><span>Date</span></th></button>
-            <button className="tableButton" onClick={(songInfo) => sortAlphabetically(songInfo)}><th><span>Count</span></th></button>
+            <button className="tableButton" onClick={()=>alert('sorry this feature isnt working yet')}><th><span>Song</span></th></button>
+            <button className="tableButton" onClick={()=>alert('sorry this feature isnt working yet')}><th><span>Artist</span></th></button>
+            <button className="tableButton" onClick={()=>alert('sorry this feature isnt working yet')}><th><span>Date</span></th></button>
+            <button className="tableButton" onClick={()=>alert('sorry this feature isnt working yet')}><th><span>Count</span></th></button>
             {createHeader(songInfo)}
             </div>
           </tr>
