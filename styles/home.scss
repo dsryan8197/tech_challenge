@@ -1,0 +1,15 @@
+//div that wraps home component
+.homeDiv {
+  display: grid;
+  grid-area: "body";
+  justify-content: center;
+  text-align: center;
+}
+
+//p tag within home componennt 
+.homePtag {
+  display: flex;
+  justify-content: center;
+  grid-area: "body";
+   width: 250px;
+}

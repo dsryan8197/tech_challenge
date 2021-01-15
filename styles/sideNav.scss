@@ -1,0 +1,21 @@
+//three buttons for SPA
+.side-nav-container {
+  display: grid;
+  grid-area: "buttons";
+  align-items: center;
+  justify-content: center;
+}
+//three main buttons
+.mainButton {
+  background-color: #C6002B;
+  color: white;
+  border-radius: 20px;
+  font-family: 'Didact Gothic', sans-serif;
+  // border: none;
+}
+
+//link tag within mainn button
+.btnLink {
+  padding-left: 20px;
+  // padding-right: 20px;
+}

@@ -1,0 +1,25 @@
+
+//header
+.top-nav-container {
+  // font-family: 'Didact Gothic', sans-serif;
+  display: grid;
+  justify-self: center;
+  grid-area: "header";
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+
+//header
+.top-nav-container {
+  font-family: 'Didact Gothic', sans-serif;
+  display: grid;
+  justify-self: center;
+  text-align: center;
+  grid-area: "header";
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
