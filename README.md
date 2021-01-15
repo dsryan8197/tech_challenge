@@ -10,15 +10,14 @@ npm install
 ```js
 npm run dev
 ```
-### Run my tests
+### Run My tests
 ```js
 npm run test
 ```
+### Review My Commit History
+<a href='https://github.com/dsryan8197/tech_challenge/commits/master' target="_blank">Here!</a>
 
-## Contributors
-<p>Seamus Ryan <a href='https://github.com/dsryan8197' target="_blank">  @github </a><a  href='https://www.linkedin.com/in/dseamusryan/' target="_blank">  @linkedin</a></p>
 
- 
  # iHeartMedia - Music Lab - Code Challenge
 
 Create a React application that shows a list of songs with their information and metrics displayed. The app should have at least **2 pages (views)**:
