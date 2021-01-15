@@ -5,11 +5,12 @@ import React from 'react';
 const Seamus: React.FC = () => {
   return (
     <div className='seamusDiv'>
-        <p>Thank you for reviewing my take-home assessment. I would love to schedule a chat to talk about how I would refactor this and some of the unexpected challenges I faced in development. Mainly dealing with the wild Webpack 5.0 Updates with TypeScript </p>
-          <p>Fun facts about me: </p> 
-          <p>I </p>
+          <h2>5 fun facts about me: </h2> 
+          <p>I just moved to Austin, TX</p>
+          <p>I never remember how to spell Wednesday? Wensday? I know theres a 'd' somewhere</p>
           <p>I ran with the bulls in Pamplona, Spain</p>
-          <p></p>
+          <p>My 2021 resolution is to drink more water because I'm constantly dehydrated</p>
+          <p>My mom is from the UK and my dad is from the US</p>
     </div>
   );
 }

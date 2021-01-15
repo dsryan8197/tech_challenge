@@ -24,26 +24,26 @@ const createTable = (songInfo:any) => {
     for (let i = 0; i < songInfo.length; i++) {
       arr.push(
           <tr key={i}>
-            <td><span>{songInfo[i].song}</span></td>
-            <td><span>{songInfo[i].artist}</span></td>
-            <td><span>{songInfo[i].songReleaseDate}</span></td>
-            <td><span>{songInfo[i].playCount}</span></td>
-            <td><span>{songInfo[i].metricA}</span></td>
-            <td><span>{songInfo[i].metricB}</span></td>
-            <td><span>{songInfo[i].metricC}</span></td>
-            <td><span>{songInfo[i].metricD}</span></td>
-            <td><span>{songInfo[i].metricE}</span></td>
-            <td><span>{songInfo[i].metricF}</span></td>
-            <td><span>{songInfo[i].metricG}</span></td>
-            <td><span>{songInfo[i].metricH}</span></td>
-            <td><span>{songInfo[i].metricI}</span></td>
-            <td><span>{songInfo[i].metricJ}</span></td>
-            <td><span>{songInfo[i].metricK}</span></td>
-            <td><span>{songInfo[i].metricL}</span></td>
-            <td><span>{songInfo[i].metricM}</span></td>
-            <td><span>{songInfo[i].metricN}</span></td>
-            <td><span>{songInfo[i].metricO}</span></td>
-            <td><span>{songInfo[i].metricP}</span></td>
+            <td>{songInfo[i].song}</td>
+            <td>{songInfo[i].artist}</td>
+            <td>{songInfo[i].songReleaseDate}</td>
+            <td>{songInfo[i].playCount}</td>
+            <td>{songInfo[i].metricA}</td>
+            <td>{songInfo[i].metricB}</td>
+            <td>{songInfo[i].metricC}</td>
+            <td>{songInfo[i].metricD}</td>
+            <td>{songInfo[i].metricE}</td>
+            <td>{songInfo[i].metricF}</td>
+            <td>{songInfo[i].metricG}</td>
+            <td>{songInfo[i].metricH}</td>
+            <td>{songInfo[i].metricI}</td>
+            <td>{songInfo[i].metricJ}</td>
+            <td>{songInfo[i].metricK}</td>
+            <td>{songInfo[i].metricL}</td>
+            <td>{songInfo[i].metricM}</td>
+            <td>{songInfo[i].metricN}</td>
+            <td>{songInfo[i].metricO}</td>
+            <td>{songInfo[i].metricP}</td>
           </tr>
       )
     }
@@ -81,14 +81,19 @@ const createHeader = (songInfo:any) => {
     <table>
         <thead>
           <tr>
+            <div className="divdiv">
             <button className="tableButton" onClick={(songInfo) => sortAlphabetically(songInfo)}><th><span>Song</span></th></button>
             <button className="tableButton" onClick={(songInfo) => sortAlphabetically(songInfo)}><th><span>Artist</span></th></button>
             <button className="tableButton" onClick={(songInfo) => sortByDate(songInfo)}><th><span>Date</span></th></button>
             <button className="tableButton" onClick={(songInfo) => sortAlphabetically(songInfo)}><th><span>Count</span></th></button>
             {createHeader(songInfo)}
+            </div>
           </tr>
         </thead>
         <tbody>
+          <td>
+             {createTable(songInfo)}
+          </td>
            {createTable(songInfo)}
         </tbody>
       </table>

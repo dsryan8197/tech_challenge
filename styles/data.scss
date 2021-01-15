@@ -5,6 +5,8 @@
   grid-area: "body";
   justify-content: center;
   padding-bottom: 50px;
+  max-width: 80%;
+  padding-left: 100px;
 }
 
 //entire table 
@@ -14,22 +16,29 @@
   // width:auto;
   flex-wrap: nowrap;
   overflow: auto;
-  white-space: nowrap;
+  // white-space: nowrap;
   overflow-x: auto;
   border: 2px solid #C6002B;
   height: 500px;
 }
-
+.answer {
+  display: inline-flex;
+}
+.divdiv{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 //table header
 .popSongs {
   text-align: center;
   justify-content: center;
+  width: 100%;
+  // padding-left: 70px;
 }
 
 //columns
 th {
-  height: 2.5rem;
-  text-align: center; 
   filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.25));
 }
 
@@ -44,22 +53,11 @@ button {
   width: 100px;
 }
 
-//inner columns
-tr {
-  max-width: 100px;
-}
-
-//body around the rows
-tbody {
-  max-width: 100px;
-}
-
 //rows
 td {
   background-color: white;
   color: black;
-  table-layout: fixed; 
-  width: 100px;
+  min-width: 200px;
   filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.25));
 }
 

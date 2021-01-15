@@ -1,6 +1,6 @@
-# Seamus Ryan IHeartMedia React Challenge
+# Seamus Ryan iHeartMedia React Challenge
 
-### Get my take-home running!
+### Get started!
 Clone my repo to your desktop
 Install the dependencies
 ```js
